@@ -81,3 +81,22 @@ button:focus-visible {
 .light {
   background-color: white;
 }
+
+.btn-dark {
+  margin-left: 20px;
+  display: inline-block;
+  color: black;
+  padding: 10px 15px;
+  background-color: antiquewhite;
+  border: 1px solid black;
+  border-radius: 99px;
+}
+.btn-light {
+  margin-left: 20px;
+  color: black;
+  display: inline-block;
+  padding: 10px 15px;
+  background-color: antiquewhite;
+  border: 1px solid black;
+  border-radius: 99px;
+}

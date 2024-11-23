@@ -28,14 +28,29 @@ header {
       }
     }
   }
-}
-.light {
-  background-color: #1f1f1f;
-  color: white;
-  a {
-    color: white;
+  .shoppingCart {
+    padding: 10px 25px;
+    font-size: 1.6rem;
+    font-weight: 600;
+    border: 1px solid black;
+    border-radius: 99px;
   }
 }
-.dark {
+.light {
   background-color: white;
+}
+.dark {
+  background-color: #1f1f1f;
+  .listNav {
+    ul {
+      li {
+        a {
+          color: wheat;
+        }
+      }
+    }
+  }
+  .shoppingCart {
+    background-color: wheat;
+  }
 }

@@ -19,17 +19,21 @@ function App() {
   return (
     <>
       <div className={backgroundColor ? "dark" : "light"}>
-        <Header />
+        <Header event={backgroundColor} />
         <button style={{ marginTop: "85px" }} onClick={showUp}>
-          click
+          {count ? "Ẩn sản phẩm " : "Hiển thị sản phẩm"}
         </button>
-        <div
-          onClick={background}
-          className={backgroundColor ? "dark" : "light"}
-        >
-          {backgroundColor ? "light" : "dark"}
-        </div>
-        <main>{count ? <Product event={backgroundColor} /> : ""}</main>
+        {count ? (
+          <div
+            onClick={background}
+            className={backgroundColor ? "btn-dark" : "btn-light"}
+          >
+            {backgroundColor ? "light" : "dark"}
+          </div>
+        ) : (
+          ""
+        )}
+        {count ? <Product event={backgroundColor} /> : ""}
       </div>
     </>
   );

@@ -24,7 +24,7 @@ function Header(props) {
             </li>
           </ul>
         </div>
-        <div htmlFor="background-color">light</div>
+        <div className={styles.shoppingCart}>Giỏ hàng</div>
       </header>
     </>
   );

@@ -5,7 +5,7 @@ import styles from "./products.module.scss";
 function Product() {
   const [seeMores, setSeeMore] = useState(10);
 
-  function seeMore() {
+  function seeMore(props) {
     setSeeMore((prev) => prev + 10);
   }
   const loadData = (data) => {
@@ -45,7 +45,9 @@ function Product() {
           </div>
         </div>
       ))}
-      <div onClick={seeMore}>{seeMores >= datas.length ? "" : "See More"}</div>
+      <div className={styles.seeMores} onClick={seeMore}>
+        {seeMores >= datas.length ? "" : "See More"}
+      </div>
     </>
   );
 }
