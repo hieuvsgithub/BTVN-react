@@ -1,0 +1,36 @@
+.item {
+  background-color: rgb(253, 245, 215);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 30px;
+  margin: 20px 10px;
+  border: 0.6px solid #000;
+  border-radius: 10px;
+  box-shadow: 2px 2px 11px 3px rgb(91, 91, 91);
+
+  .left {
+    a {
+      display: inline-block;
+      margin-left: 10px;
+      margin-top: 5px;
+      line-height: 0;
+      width: 300px;
+      img {
+        width: 100%;
+        object-fit: fill;
+        border-radius: 10px;
+      }
+    }
+  }
+  .right {
+    .information {
+      .title {
+        h2 {
+          font-size: 2.2rem;
+          font-weight: 700;
+        }
+      }
+    }
+  }
+}
