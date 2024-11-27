@@ -1,10 +1,10 @@
 import styles from "../header/header.module.scss";
 import logo from "../../img/LOGO.png";
 
-function Header(props) {
+function Header() {
   return (
     <>
-      <header className={props.event ? styles.dark : styles.light}>
+      <header>
         <a href="#" className={styles.logo}>
           <img src={logo} alt="Ảnh sản phẩm" />
         </a>
