@@ -1,0 +1,89 @@
+.wrapper {
+  margin: 20px;
+
+  .header {
+    .logo {
+      width: 20%;
+      img {
+        width: 100%;
+      }
+    }
+  }
+  .wrapperMain {
+    display: flex;
+    justify-content: space-between;
+    .sideBar {
+      width: 25%;
+
+      ul {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        li {
+          a {
+            color: #1f1f1f;
+            font-weight: 700;
+          }
+        }
+      }
+    }
+    .main {
+      width: 70%;
+      .title {
+        h3 {
+          margin: 15px 0;
+        }
+      }
+      .wrapperBtnAddProducts {
+        display: flex;
+        justify-content: end;
+        .btnAddProducts {
+          display: inline-block;
+
+          padding: 6px 22px;
+          background-color: rgb(15, 71, 238);
+          border-radius: 6px;
+          color: white;
+          font-weight: 600;
+        }
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        thead {
+          tr {
+            th {
+              text-align: left;
+              padding: 10px 0;
+            }
+          }
+        }
+        tbody {
+          tr {
+            margin: 10px;
+            height: 40px;
+            &:nth-child(even) {
+              background-color: rgb(216, 216, 216);
+            }
+
+            td {
+              span {
+                padding: 6px 15px;
+                border-radius: 6px;
+                font-weight: 600;
+                &:nth-child(1) {
+                  margin-right: 10px;
+                  background-color: red;
+                  color: white;
+                }
+                &:nth-child(2) {
+                  background-color: rgb(255, 234, 0);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
