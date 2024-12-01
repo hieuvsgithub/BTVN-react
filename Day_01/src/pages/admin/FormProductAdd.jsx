@@ -18,7 +18,7 @@ const FormProductAdd = ({
   // };
 
   const [productItem, setProductItem] = useState({});
-
+  const [dis, setDis] = useState(false);
   // cập nhật
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -49,12 +49,13 @@ const FormProductAdd = ({
     e.preventDefault();
     const fetch = async () => {
       if (id) {
+        setDis(true);
         const data = await updateById("/products", id, productItem);
 
         setProductItem((prev) => [...prev, productItem]);
         // console.log(productItem);
-
         confirm("cap nhat thanh cong") && nav("/admin");
+        setDis(false);
       } else {
         const response = await create("/products", productItem);
         // console.log(response);
@@ -111,7 +112,7 @@ const FormProductAdd = ({
           />
         </div>
         <div className="form-group">
-          <button onClick={handleSubmit}>
+          <button disabled={dis} onClick={handleSubmit}>
             {id ? "update" : "add"} product
           </button>
         </div>
