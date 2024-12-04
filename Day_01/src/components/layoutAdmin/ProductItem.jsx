@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import styles from "./DashBoardPage.module.scss";
+import styles from "./LayoutAdmin.module.scss";
 import { Link } from "react-router-dom";
 
 function ProductItem({ product, updateProduct, datas }) {

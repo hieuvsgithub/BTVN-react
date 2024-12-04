@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 // import React from "react";
-import styles from "./DashBoardPage.module.scss";
+import styles from "./LayoutAdmin.module.scss";
 import { Link } from "react-router-dom";
 import ProductItem from "./ProductItem";
 

@@ -1,0 +1,25 @@
+@use "../src/scss/partials/reset.scss";
+@use "../src/scss/partials/fonts.scss";
+@use "../src/scss/partials/base.scss";
+@use "../src/scss/partials/mixin.scss";
+@use "../src/scss/partials/variables.scss";
+
+html {
+  font-size: 62.5%;
+}
+body {
+  font-size: 1.6rem;
+  font-family: "Open sans", sans-serif;
+}
+
+input,
+button,
+select {
+  font-family: inherit;
+  outline: none;
+  border: none;
+}
+
+a {
+  text-decoration: none;
+}

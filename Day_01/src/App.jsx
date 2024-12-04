@@ -1,44 +1,20 @@
-import { Routes, Route, Link } from "react-router-dom";
-import DashBoardPage from "./pages/admin/DashBoardPage/DashBoardPage";
-import ProductsList from "./pages/admin/DashBoardPage/ProductsList";
+import { Routes, Route } from "react-router-dom";
+// import DashBoardPage from "./pages/admin/DashBoardPage/DashBoardPage";
+import ProductsList from "./components/layoutAdmin/ProductsList";
 import { useEffect } from "react";
 import { useState } from "react";
 import FormProductAdd from "./pages/admin/FormProductAdd";
 import { getAll } from "./pages/admin/axios/index";
+import FormLogin from "./pages/FormLogin";
+import FormRegister from "./pages/FormRegister";
+import Products from "./components/layoutUser/Products";
+import LayoutUser from "./components/layoutUser/LayoutUser";
+import LayoutAdmin from "./components/layoutAdmin/LayoutAdmin";
+import NotFoundPage from "./pages/NotFoundPage";
 
 function App() {
   const [products, setProducts] = useState([]);
   const [stateProducts, setStateProducts] = useState(false);
-  // useEffect(() => {
-  //   try {
-  //     (async () => {
-  //       // C1:
-  //       // const res = await fetch("http://localhost:3000/products");
-  //       // const data = await res.json();
-  //       // C2:
-  //       // const { data } = await axios.get("http://localhost:3000/products");
-
-  //       // C3:
-  //       const { data } = await instance.get(`/products`);
-  //       console.log(data);
-  //       setProducts(data);
-  //     })();
-  //   } catch (error) {
-  //     console.log(error);
-  //   }
-
-  //   return () => {};
-  // }, []);
-
-  // useEffect(() => {
-  //   (async () => {
-  //     const data = await getAll("/products");
-  //     console.log(data);
-  //     setProducts(data);
-  //   })();
-
-  //   return () => {};
-  // }, []);
 
   useEffect(() => {
     const fetch = async () => {
@@ -51,9 +27,13 @@ function App() {
 
   return (
     <>
-      {/* <Header /> */}
       <Routes>
-        <Route path="/admin" element={<DashBoardPage />}>
+        {/* Page Users */}
+        <Route path="/" element={<LayoutUser />}>
+          <Route path="/" element={<Products />} />
+        </Route>
+        {/* Page Admin */}
+        <Route path="/admin" element={<LayoutAdmin />}>
           <Route
             path="/admin"
             element={<ProductsList data={products} setProducts={setProducts} />}
@@ -76,11 +56,13 @@ function App() {
             }
           />
         </Route>
+        {/* Page login /register */}
+        <Route path="/user">
+          <Route path="login" element={<FormLogin />} />
+          <Route path="register" element={<FormRegister />} />
+        </Route>
+        <Route path="*" element={<NotFoundPage />} />
       </Routes>
-      <button>
-        <Link to="/admin">Click</Link>
-      </button>
-      {/* <Products /> */}
     </>
   );
 }
