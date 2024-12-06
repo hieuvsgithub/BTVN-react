@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from "react";
 
 const scrollHeader = () => {
+  console.log(1);
   // eslint-disable-next-line no-unused-vars, react-hooks/rules-of-hooks
   const [display, setDisplay] = useState(false);
   // eslint-disable-next-line react-hooks/rules-of-hooks

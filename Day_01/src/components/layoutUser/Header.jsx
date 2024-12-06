@@ -75,7 +75,7 @@ function Header() {
             </div>
             {/* <!-- list-link --> */}
             <div className={styles["wrapper-sidebar"]}>
-              <input type="checkbox" id="sidebar" hidden />
+              <input type="checkbox" id={styles.sidebar} hidden />
               <label htmlFor="sidebar" className={styles.sidebar}>
                 <i className="fa-solid fa-bars"></i>
               </label>
@@ -122,7 +122,7 @@ function Header() {
                 name="category"
                 hidden
               />
-              <label className={styles.category} htmlFor="category">
+              <label className={styles.category} htmlFor={styles.category}>
                 <i className="fa-solid fa-bars"></i>
                 <span> Danh mục</span>
               </label>
@@ -193,7 +193,7 @@ function Header() {
             {/* <!-- wrapper-icon --> */}
           </div>
           {/* <!-- header-bottom --> */}
-          <div onChange={scrollHeader} className={styles["header-to-scroll"]}>
+          <div onScroll={scrollHeader} className={styles["header-to-scroll"]}>
             <a href="#" className={styles.logo}>
               <img src={logo} alt="Ảnh logo" />
             </a>
@@ -237,7 +237,11 @@ function Header() {
             </div>
             {/* <!-- wrapper-icon --> */}
             <div className={styles["wrapper-sidebar"]}>
-              <input type="checkbox" id="sidebar-in-header-to-scroll" hidden />
+              <input
+                type="checkbox"
+                id={styles["sidebar-in-header-to-scroll"]}
+                hidden
+              />
               <label
                 htmlFor="sidebar-in-header-to-scroll"
                 className={styles.sidebar}
