@@ -10,7 +10,7 @@ const FormLogin = () => {
   const nav = useNavigate();
   const {
     register,
-    reset,
+    // reset,
     formState: { errors },
     handleSubmit,
   } = useForm({

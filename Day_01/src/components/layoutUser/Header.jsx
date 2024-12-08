@@ -1,8 +1,13 @@
 import styles from "../../scss/components/header.module.scss";
 import logo from "../../img/LOGO.png";
 import scrollHeader from "./scrollHeader";
+import { useContext } from "react";
+import { ProductContext } from "../../contexts/ProductContext";
 
 function Header() {
+  const [state, dispatch] = useContext(ProductContext);
+
+  console.log(state.products);
   return (
     <>
       <header className={styles.header}>
